@@ -7,6 +7,8 @@ namespace MagnaScope
 {
 	public partial class MegaScopeForm : Form
 	{
+		// This is a test
+
 		// Graphics
 		private Graphics g;
 		private Bitmap bmp;
