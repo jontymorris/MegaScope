@@ -22,17 +22,12 @@ namespace MagnaScope
 		// Other
 		private bool running;
 
-		private const float screenScale = 3f;
+		private const int screenScale = 3;
 		private const int cropScale = 6;
 
 		public MegaScopeForm()
 		{
 			InitializeComponent();
-
-			// Transparency
-			this.SetStyle(System.Windows.Forms.ControlStyles.SupportsTransparentBackColor, true);
-			this.BackColor = System.Drawing.Color.Transparent;
-			pictureBox.BackColor = Color.Transparent;
 
 			this.Opacity = 0;
 			Cursor.Hide();
@@ -41,8 +36,8 @@ namespace MagnaScope
 			//screen = Screen.PrimaryScreen.Bounds;
 			screen = new Rectangle(0, 0, 1920, 1080);
 
-			this.Width = (int)(screen.Width / screenScale);
-			this.Height = (int)(screen.Height / screenScale);
+			this.Width = screen.Width / screenScale;
+			this.Height = screen.Height / screenScale;
 			pictureBox.Width = this.Width;
 			pictureBox.Height = this.Height;
 			
